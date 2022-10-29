@@ -8,10 +8,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`md:bg-white ${
+      className={`md:bg-white z-40 mb-2 ${
         navOpen
-          ? "bg-black/70 fixed h-screen transition-all duration-500 ease-in-out z-40 w-full"
-          : "bg-white"
+          ? "bg-black/70 md:h-20 h-screen z-40 fixed w-full md:sticky"
+          : "bg-white sticky top-0"
       }`}
     >
       <nav className="flex items-center justify-between md:justify-around p-2 shadow-lg z-30">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div onClick={() => setNavOpen(!navOpen)}>
-          <ViewListIcon className="md:hidden h-8 hover:scale-105 ease-in duration-200 cursor-pointer" />
+          <ViewListIcon className="md:hidden h-8 hover:scale-110 ease-in duration-200 cursor-pointer" />
         </div>
         <div className="hidden md:inline-flex">
           <ul className="flex items-center space-x-6">
@@ -37,11 +37,7 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
-            <Link href="/">
-              <li className="uppercase text-xl cursor-pointer hover:underline underline-offset-2">
-                About
-              </li>
-            </Link>
+
             <Link href="/">
               <li className="uppercase text-xl cursor-pointer hover:underline underline-offset-2">
                 Skills
@@ -88,11 +84,7 @@ const Navbar = () => {
               Home
             </li>
           </Link>
-          <Link href="/">
-            <li className="uppercase text-xl cursor-pointer hover:underline underline-offset-2">
-              About
-            </li>
-          </Link>
+
           <Link href="/">
             <li className="uppercase text-xl cursor-pointer hover:underline underline-offset-2">
               Skills
