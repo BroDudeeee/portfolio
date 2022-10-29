@@ -29,7 +29,7 @@ const Projects = () => {
         {projects.map(({ id, img, name, link }) => (
           <div
             key={id}
-            className="relative hover:bg-blue-600 flex items-center justify-center m-4 group border-2 border-gray-200 shadow-md rounded-xl h-80 w-96"
+            className="relative hover:bg-blue-600 flex items-center justify-center text-center m-4 group border-2 border-gray-200 shadow-md rounded-xl h-40 sm:h-80 w-40 sm:w-96"
           >
             <img
               src={img}
